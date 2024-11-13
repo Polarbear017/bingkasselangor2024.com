@@ -1,0 +1,408 @@
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<style>
+
+    .toast-container{
+        background: rgba(0,0,0,0.5);
+        height:100vw !important;
+        width:100vw !important;
+
+    }
+
+    .toast{
+            width: 350px;
+        max-width: 100%;
+        font-size: .875rem;
+        pointer-events: auto;
+        background-color: rgba(255,255,255,.85);
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.1);
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+        border-radius: 0.25rem;
+        position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    }
+
+    .darken-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Darkened background with 50% opacity */
+    z-index: 9998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 10s ease-in-out;
+    }
+
+    .toast-x-container{
+        position: absolute;
+        top: 147px;
+        left: 0;
+    }
+
+    .toast-x{
+        background-color: #FFFFFF;
+        border-radius: 0px 12px 12px 0px;
+        height: fit-content;
+        width: fit-content;
+        padding: 15px;
+    }
+
+    .toast-x-heading{
+        margin: 0px;
+        padding: 0px;
+        color: #53468C;
+        font-weight: 600;
+        padding: 0px 10px 0px 15px;
+    }
+    .toast-x-sub{
+        margin: 0px;
+        padding: 0px;
+        color: #948ABE;
+        padding: 0px 10px 0px 15px;
+    }
+
+    @media(max-width:767px) {
+        .toast-x-container {
+            top: unset !important;
+            bottom: 0 !important;
+        }
+        .toast-x{
+            border-radius: 0px !important;
+        }
+    }
+
+
+</style>
+
+
+<script>
+$(document).ready(function() {
+    $("#daftarTutup").modal('show');
+    // $(window).scrollTop(0);
+    // const overlay = document.getElementById('overlay');
+    // $('.toast-body').empty();
+    // $('.toast-body').append("Bermula pada 1 Jun 2023, bantuan kewangan BINGKAS sebanyak RM300.00 sebulan yang tidak habis digunakan akan dibawa ke hadapan bulan seterusnya, akan tetapi dengan had e-wallet sebanyak RM600.00 sahaja. Sekiranya terdapat pertanyaan lanjut, pihak tuan/puan boleh menghubungi talian hotline 1-800-22-6600");
+    // $('.toast').css('opacity', '1');
+    // $('.toast').toast("show");
+
+    
+    // $('.btn-close-white').click(function() {
+    // $('.toast-container').css('background', 'rgba(0,0,0,0)');
+//   });
+
+})
+</script>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="9dMQvtg8lGDjgCaBqwUDjakd1zsi9tuMnUxQPmMg" />
+
+        <link rel="stylesheet" href="https://bingkasselangor.com/css/font-awesome/all.css">
+    <link rel="stylesheet" href="https://bingkasselangor.com/css/home.css">
+    <link rel="stylesheet" href="https://bingkasselangor.com/css/style.css">
+    <link rel="stylesheet" href="https://bingkasselangor.com/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bingkasselangor.com/css/font-awesome/all.css">
+    <link rel="stylesheet" href="https://bingkasselangor.com/css/app.css">
+
+    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+    
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.material.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script> -->
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    
+    <div class="row fixed-top">
+
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-between px-4 mt-3">
+            <div class="px-4">
+
+                <a class="navbar-brand" href="https://bingkasselangor.com">
+                    <img src="https://bingkasselangor.com/images/jataNegeri-logo.png" alt="" height="60">
+                </a>
+            </div>
+            <div class="px-4">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" aria-haspopup="true">
+                    <span class="navbar-toggler-icon"></span>
+</button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown px-2">
+                            <a class="nav-link dropdown-toggle" role="button" href="#"  data-bs-target="#navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-controls="navbar" aria-haspopup="true" aria-expanded="false">
+                        Bantuan
+                            </a>
+                            <div class="dropdown-menu" id="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="https://bingkasselangor.com#pengenalan">Pengenalan</a>
+                                <a class="dropdown-item" href="https://bingkasselangor.com#manfaat">Manfaat</a>
+                                <a class="dropdown-item" href="https://bingkasselangor.com#syarat-pendaftaran">Syarat Kelayakan</a>
+                                <a class="dropdown-item" href="https://bingkasselangor.com/cara-pembelian#senarai-barangan">Senarai Barangan</a>
+                                <a class="dropdown-item" href="https://bingkasselangor.com/cara-pembelian">Cara Pembelian</a>
+                                <a class="dropdown-item" href="https://bingkasselangor.com/proses-permohonan">Cara Permohonan</a>
+                                <a class="dropdown-item" href="https://bingkasselangor.com/senarai-kedai">Senarai Panel Kedai</a>
+                                <a class="dropdown-item" href="https://bingkasselangor.com/soalan-lazim">Soalan Lazim</a>
+                            </div>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="https://bingkasselangor.com/hubungi-kami">Hubungi Kami</a>
+                        </li>
+                        <li class="nav-item log-masuk-btn px-2">
+                                                        <a class="nav-link" href="login1.html#">Log Masuk</a>
+                            
+                            
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            </nav>
+
+</div>
+
+
+
+    <!-- <script src="https://bingkasselangor.com/js/senaraiKedai.js"></script> -->
+</head>
+<body style="font-family: 'Inter', sans-serif; background-color: #F3F2F9;">
+
+    
+
+<div id="overlay"></div>
+
+<div id="home-background" class="d-flex justify-content-end align-items-center">
+    <div class="col-md-6" style="    padding: 0em 6em;">
+        <img src="https://bingkasselangor.com/images/revamp/LOGO_BINGKAS_2024.png" alt="" style=" max-width: 100px;
+    margin-left: 1em;">
+        <p class="fs-2 font-weight-bolder lh-sm mt-3" style=" margin-left: 12px;">
+            Lindungi keluarga anda <br> dari ketidakpastian ekonomi
+        </p>
+        <p class="fs-7 mb-4" style=" margin-left: 12px;">
+            Program Bantuan Kehidupan Sejahtera Selangor dirangkakan khas untuk meningkatkan kedayatahanan kewangan keluarga penduduk Selangor.
+        </p>
+        <div class="mt-4">
+                        <a class="red-btn mt-4" href="login1.html">
+                                            Daftar Sekarang
+                    
+                </a>
+            
+                 </div>
+    </div>
+    <!-- <div class="col-md-6 toast-x-container d-none d-md-block d-lg-block d-xl-block">
+            <div class="toast-x">
+                <div class="row">
+                    <div class="col-1 m-auto">
+                        <img src="https://bingkasselangor.com/images/Alert.png" alt="" style="height: 38px; width: auto;">
+                    </div>
+                    <div class="col">
+                        <p class="toast-x-heading">Maaf, Pendaftaran Kini Ditutup</p>
+                        <p class="toast-x-sub">Terima kasih atas minat anda dalam program ini</p>
+                    </div>
+                </div>
+            </div>
+    </div> -->
+    <div class="col-md-6 px-5 d-sm-none d-md-block" id="header-home">
+        <div class="text-center pt-4">
+            <img src="https://bingkasselangor.com/images/revamp/home_side_img.png" alt="" style="max-width: 80%;">
+        </div>
+    </div>
+</div>
+
+
+<section id="pengenalan">
+    <div class="row w-100">
+        <div class="col-md-6 col-sm-10 m-auto " >
+            <div class="pengenalan-card">
+                <p class="fs-4 font-weight-bolder" style="letter-spacing: 3px;">PENGENALAN</p>
+                <p class="fs-7 text-justify">Kerajaan Negeri Selangor memperkenalkan Bantuan Kehidupan Sejahtera Selangor (BINGKAS) untuk 
+                    memberikan sokongan kepada keluarga-keluarga pasca-pandemik, 
+                    meluaskan manfaat kepada 30,000 keluarga dengan RM300 sebulan untuk keperluan asas dan alat pendidikan.</p>
+                <p class="fs-7 text-justify">BINGKAS bertujuan meningkatkan kestabilan kewangan, mengurangkan cabaran ekonomi, dan memperkukuh keharmonian keluarga serta kemakmuran di Selangor.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <img src="https://bingkasselangor.com/images/revamp/pengenalan.png" alt="" style="padding: 3em 0em 0em 1em;">
+        </div>
+    </div>
+
+</section>
+
+
+
+<section id="manfaat">
+    <p class="fs-4 font-weight-bolder text-center" style="letter-spacing: 3px;">MANFAAT</p>
+    <div class="row  justify-content-center">
+        <div class="col-md-3 col-lg-2 col-sm-12 text-center" style="">
+            <img src="https://bingkasselangor.com/images/revamp/manfaat1.png" alt="" style="">
+            <p class="fs-7 mt-3 px-sm-8">e-Wallet BINGKAS boleh diguna di kedai serta pasaraya berdaftar</p>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-12 text-center">
+            <img src="https://bingkasselangor.com/images/revamp/manfaat2.png" alt="" style="">
+            <p class="fs-7 mt-3 px-sm-8">Urusniaga pembelian secara tanpa tunai (melalui e-Wallet)</p>
+
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-12 text-center">
+            <img src="https://bingkasselangor.com/images/revamp/manfaat3.png" alt="" style="">
+            <p class="fs-7 mt-3 px-sm-8">Had bulanan pembelian barangan keperluan asas sebanyak RM300</p>
+        </div>
+    </div>
+    <div class="row  justify-content-center mt-4">
+        <div class="col-md-3 col-lg-2 col-sm-12 text-center" style="">
+            <img src="https://bingkasselangor.com/images/revamp/manfaat4.png" alt="" style="">
+            <p class="fs-7 mt-3 px-sm-8">Baki nilai bagi bulan terdahulu perlu dihabiskan dan tidak dibawa ke bulan hadapan</p>
+        </div>
+        <div class="col-md-3 col-lg-2 col-sm-12 text-center">
+            <img src="https://bingkasselangor.com/images/revamp/manfaat5.png" alt="" style="">
+            <p class="fs-7 mt-3 px-sm-8">e-Wallet BINGKAS akan ditambah nilai ke tahap RM300 setiap bulan secara automatik</p>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+<section id="syarat-pendaftaran">
+    <p class="fs-4 font-weight-bolder text-center mb-0" style="letter-spacing: 3px;">SYARAT KELAYAKAN</p>
+    <p class="fs-6 font-weight-bolder text-center" style="">Bermula 1 November 2024</p>
+    <div class="ml-sm-2">
+        <div class="row w-100 justify-content-center p-3 pb-0">
+            <div class="col-md-4 col-sm-12 col-lg-3 d-flex py-sm-3 "  style="">
+                <div class="checkmark-blue my-auto"><i class="fa fa-check fa-fw text-white"></i></div>
+                <p class="fs-7 mx-3 my-auto">Warganegara Malaysia</p>
+            </div>
+            <div class="col-md-4 col-sm-12 col-lg-3 d-flex py-sm-3 ">
+                <div class="checkmark-blue my-auto"><i class="fa fa-check fa-fw text-white"></i></div>
+                <p class="fs-7 mx-3 my-auto">Pendapatan bulanan isi rumah RM5,000.00 dan ke bawah</p>
+            </div>
+        </div>
+        <div class="row w-100 justify-content-center px-3">
+            <div class="col-md-4 col-sm-12 col-lg-3 d-flex py-sm-3 " style="">
+                <div class="checkmark-blue my-auto"><i class="fa fa-check fa-fw text-white"></i></div>
+                <p class="fs-7 mx-3 my-auto">Pemilih berdaftar di Selangor</p>
+            </div>
+            <div class="col-md-4 col-sm-12 col-lg-3 d-flex py-sm-3 ">
+                <div class="checkmark-blue my-auto"><i class="fa fa-check fa-fw text-white"></i></div>
+                <p class="fs-7 mx-3 my-auto">Keluarga yang mempunyai tanggungan minimum dua (2) orang berusia 18 tahun ke bawah</p>
+            </div>
+        </div>
+        <div class="row w-100 justify-content-center p-3 pt-0">
+            <div class="col-md-4 col-sm-12 col-lg-3 d-flex py-sm-3 " style="">
+                <div class="checkmark-blue my-auto"><i class="fa fa-check fa-fw text-white"></i></div>
+                <p class="fs-7 mx-3 my-auto">Lahir di Selangor atau menetap di Selangor melebihi 10 tahun</p>
+            </div>
+            <div class="col-md-4 col-sm-12 col-lg-3 d-flex py-sm-3 ">
+              
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<section id="box-card" style="padding-bottom: 4em;">
+    <div class="row m-auto home-card">
+        <div class="col-md-7 col-sm-12 m-auto" style="">
+            <p class="fs-6 text-white px-4">Anda bersedia untuk memanfaatkan program BINGKAS?</p>
+        </div>
+        <div class="col-md-4">
+
+                            <a class="blue-btn" href="login1.html">
+                                            Log Masuk
+                    
+                </a>
+            
+                     
+        </div>
+    </div>
+   
+</section>
+
+
+
+
+
+<div class="container-fluid text-center pt-4 pb-2" style="background-color:#F3F2F9;">
+        <img src="https://bingkasselangor.com/images/revamp/logo_selcare.png" alt="" style="">
+        <p style="font-size: 0.75em; color: #8177BD !important;" class="mt-3">Hak Milik Kerajaan Negeri Selangor | Selcare Management Sdn. Bhd. 2024</p>
+</div>
+
+   
+  
+
+
+    <!-- <div class="toast-container position-absolute p-3 top-50 start-50 translate-middle" style="transform: translate(-50%, -0%) !important;">
+    <div class="toast" data-bs-autohide="false" id="toast" style="background-color: #FFFFFF; border-radius: 16px; border: transparent">
+ 
+        <div class="toast-body pt-5 pb-3 text-center fs-6" style="background-color: #fff; border-radius: 16px;">
+        </div>
+        <div class="m-auto text-center mb-4">
+            <button type="button" class="btn red-btn-border mx-3 w-50 mb-4" data-bs-dismiss="toast" style="font-size: 13px !important;">Tutup</button>
+        </div>
+    </div>
+</div>
+ -->
+    
+    <script>
+        $(document).ready(function() {
+            $('.navbar-toggler').click(function() {
+                let sl = document.getElementById('navbarCollapse');
+                sl.classList.toggle('show');
+              
+            })
+
+            $('.dropdown-toggle').click(function() {
+                let el = document.getElementById('navbarDropdownMenuLink');
+                el.classList.toggle('show');
+            })
+
+        })
+    </script>
+
+
+</body>
+</html>
+
+<script>
+    // $('.toast-container').show();
+    // $('.toast-body').empty();
+    // $('.toast-body').append('OTP anda tidak dihantar. Sila tunggu selama SATU (1) minit untuk meminta OTP seterusnya.');
+    // $('.toast').toast("show");
+    // $('.toast-container').hide();
+</script>
